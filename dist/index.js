@@ -113,8 +113,11 @@ const bai2_1 = require("./Tuan2/Bai2/bai2");
 const bai3_1 = require("./Tuan2/bai3/bai3");
 const bai4_1 = require("./Tuan2/bai4/bai4");
 const simulateTask_1 = require("./Tuan2/bai5/simulateTask");
+const simulateTask7_1 = require("./Tuan2/bai7/simulateTask7");
+const simulateTask6_1 = require("./Tuan2/bai6/simulateTask6");
 const bai8_1 = require("./Tuan2/bai8/bai8");
 const bai9_1 = require("./Tuan2/bai9/bai9");
+const simulateTask10_1 = require("./Tuan2/bai10/simulateTask10");
 bai1_1.bai1.then((message) => {
     console.log(message);
 });
@@ -135,9 +138,9 @@ bai4_1.getRandomNumber
     console.log(message); // Logs "Task done" after 2 seconds
 });
 // Run 3 tasks in parallel
-const task1 = (0, simulateTask_1.simulateTask)(1000); // 1 second
-const task2 = (0, simulateTask_1.simulateTask)(2000); // 2 seconds
-const task3 = (0, simulateTask_1.simulateTask)(1500); // 1.5 seconds
+const task1 = (0, simulateTask6_1.simulateTask6)(1000); // 1 second
+const task2 = (0, simulateTask6_1.simulateTask6)(2000); // 2 seconds
+const task3 = (0, simulateTask6_1.simulateTask6)(1500); // 1.5 seconds
 Promise.all([task1, task2, task3])
     .then((results) => {
     console.log("All tasks completed:");
@@ -150,9 +153,9 @@ Promise.all([task1, task2, task3])
 });
 // Run 3 tasks in parallel
 Promise.all([
-    (0, simulateTask_1.simulateTask)(1000),
-    (0, simulateTask_1.simulateTask)(2000),
-    (0, simulateTask_1.simulateTask)(1500)
+    (0, simulateTask7_1.simulateTask7)(1000),
+    (0, simulateTask7_1.simulateTask7)(2000),
+    (0, simulateTask7_1.simulateTask7)(1500)
 ])
     .then((results) => {
     console.log("All tasks completed:");
@@ -167,4 +170,14 @@ Promise.all([
 const arr = [1, 2, 3, 4, 5, 6];
 (0, bai9_1.bai9)(arr).then((message) => {
     console.log("Arr :", message);
+});
+(0, simulateTask10_1.simulateTask10)(1000)
+    .then((results) => {
+    console.log("All tasks completed:");
+})
+    .catch((error) => {
+    console.error("One of the tasks failed:", error);
+})
+    .finally(() => {
+    console.log("done");
 });
