@@ -7,10 +7,13 @@ import {
   Text,
   Pressable,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from 'expo-router';
+import logo from "../assets/images/logo.png"
+
 
 export default function  LoginScreen() {
   const router = useRouter();
@@ -29,8 +32,20 @@ export default function  LoginScreen() {
           </View>
           <View style={styles.containerButton}>
             <Pressable style={styles.button}>
-              <Text style={styles.textButton} onPress={()=> {router.push('/')}}>Next</Text>
+              <Text style={styles.textButton} onPress={()=> {router.push('/')}}>LOGIN</Text>
             </Pressable>
+          </View>
+          <Text style={styles.text1}>When you agree to terms and conditions</Text>
+          <TouchableOpacity onPress={()=>{}}>
+            <Text style={styles.text2}>For got your password?</Text>
+          </TouchableOpacity>
+          <View style={{marginTop:20}}>
+            <Text>Or login with</Text>
+          </View>
+          <View style={styles.button1}>
+            <TouchableOpacity onPress={()=>{}}>
+              <Image source={logo} />
+            </TouchableOpacity>
           </View>
         </View>
     </SafeAreaView>
@@ -40,7 +55,7 @@ export default function  LoginScreen() {
 const styles = StyleSheet.create({
   safeAreaViewContainer: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#d8efde",
   },
   container: {
     flex: 1,
@@ -49,11 +64,10 @@ const styles = StyleSheet.create({
   },
   logoIndex: {},
   text: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginTop: 40,
-    width: 200,
-    height: 58,
+    fontFamily:"bold",
+    fontSize: 30,
+    width: 302,
+    height: 36,
     textAlign: "center",
   },
   text1: {
@@ -61,26 +75,29 @@ const styles = StyleSheet.create({
     marginTop: 40,
     width: 302,
     height: 36,
-    fontWeight: "bold",
     textAlign: "center",
   },
   containerButton: {
     flexDirection: "row",
-    marginTop: 40,
+    marginTop: 50,
     gap: 20,
     justifyContent: "space-between",
   },
   button: {
     width: 305,
     height: 45,
-    backgroundColor: "yellow",
+    backgroundColor: "#c34e3b",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
   },
+  button1:{
+    marginTop: 30
+  },
   textButton: {
     fontWeight: "bold",
+  
   },
   containerInput: {
     flexDirection: "row",
@@ -100,5 +117,8 @@ const styles = StyleSheet.create({
     height:45,
     borderWidth:1,
     padding:10
+  },
+  text2:{
+    color:"#5D25FA"
   }
 });
