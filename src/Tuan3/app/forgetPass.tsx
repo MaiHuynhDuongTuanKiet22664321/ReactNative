@@ -12,11 +12,11 @@ import Lock from "../assets/images/Vector.png";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
-import  {useRoute}  from "expo-router";
+import  {useRouter}  from "expo-router";
 
 
 export default function ForgetPassScreen() {
-  const router = useRoute();
+  const router = useRouter();
   return (
     <SafeAreaView style={styles.safeAreaViewContainer}>
       <LinearGradient
