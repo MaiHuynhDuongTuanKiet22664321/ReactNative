@@ -18,6 +18,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="evaluate" options={{ headerShown: false }} />
         <Stack.Screen name="tikiOke" options={{ headerShown: false }} />
+        <Stack.Screen name="PasswordGeneratorScreen" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

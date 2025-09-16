@@ -6,8 +6,8 @@ import book from "../assets/images/book.png";
 const tikiOke = () => {
   return (
     <SafeAreaView style={styles.safeAreaViewContainer}>
-      <View style={{ flex: 3 }}>
-        <View style={{ flex: 6, flexDirection: "row", height: 200 }}>
+      <View style={{ flex: 3 , backgroundColor: "white" }}>
+        <View style={{ flex: 6, flexDirection: "row", height: 200 , padding: 10}}>
           <View style={{ flex: 3 }}>
             <Image source={book} />
           </View>
@@ -24,6 +24,7 @@ const tikiOke = () => {
                 fontSize: 20,
                 paddingTop: 10,
                 color: "red",
+                padding: 10,
               }}
             >
               141.800 đ
@@ -79,8 +80,8 @@ const tikiOke = () => {
               </View>
             </View>
           </View>
-        </View>
-        <View style={{ flex: 2 }}>
+        </View >
+        <View style={{ flex: 2 , padding: 10}}>
           <View style={{ flexDirection: "row" }}>
             <Text style={{ fontWeight: "bold" }}>Mã giảm giá đã lưu</Text>
             <Text
@@ -90,7 +91,7 @@ const tikiOke = () => {
             </Text>
           </View>
         </View>
-        <View style={{ flex: 2 , flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
+        <View style={{ flex: 2 , flexDirection: "row", alignItems: "center", justifyContent: "space-between" , padding: 10}}>
           <View
             style={{
               borderWidth: 1,
@@ -133,10 +134,21 @@ const tikiOke = () => {
         </View>
       </View>
       <View style={{ flex: 5 }}>
-        <View style={{ flex: 1 }}></View>
-        <View style={{ flex: 1 }}></View>
-        <View style={{ flex: 4 }}></View>
-        <View style={{ flex: 4 }}></View>
+        <View style={{ flex: 1 , backgroundColor: "white" , marginVertical: 20 ,padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+             <Text style={{ fontWeight: "bold"}}>Bạn có phiếu quà tặng Tiki/Got it/ Urbox?</Text>
+            <Text style={{ fontWeight: "bold", color: "#1531e6ff"}}> Nhập tại đây</Text>
+        </View>
+        <View style={{ flex: 1, backgroundColor: "white" , flexDirection: "row",padding: 12, alignItems: "center", justifyContent: "space-between" }}>
+            <Text style={{ fontWeight: "bold", fontSize: 20}}>Tạm tính</Text>
+            <Text style={{ fontWeight: "bold", color: "red", fontSize: 20}}> 141.800 đ</Text>
+        </View>
+        <View style={{ flex: 4, backgroundColor: "white", marginTop: 200, padding: 10}}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+              <Text style={{ fontWeight: "bold", fontSize: 20 , color: "#9b9b9bff"}}>Thành tiền</Text>
+              <Text style={{ fontWeight: "bold", color: "red", fontSize: 20}}> 141.800 đ</Text>
+            </View>
+            <TouchableOpacity style={{ backgroundColor: "#e61523ff", width: 400, height: 50,flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 20}}><Text style={{ fontWeight: "bold", color: "white", fontSize: 20}}>TIẾN HÀNH ĐẶT HÀNG</Text></TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -147,7 +159,6 @@ export default tikiOke;
 const styles = StyleSheet.create({
   safeAreaViewContainer: {
     flex: 1,
-    backgroundColor: "white",
-    padding: 10,
+    backgroundColor: "gray",
   },
 });
