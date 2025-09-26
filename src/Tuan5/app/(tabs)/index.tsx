@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { imageMap } from "./imageMap";
+import { imageMap } from "../imageMap";
 import star from "@/assets/images/star.png";
 import { useRouter, useLocalSearchParams } from "expo-router";
 
@@ -23,7 +23,7 @@ export default function HomeScreen() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "https://68ca4e99430c4476c348fa2f.mockapi.io/product/product/black"
+          "https://6832af5cc3f2222a8cb31541.mockapi.io/Courses/Courses/black"
         );
         const d = await res.json();
         setData(d);

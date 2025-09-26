@@ -32,7 +32,7 @@ const SelectColor = () => {
       try {
         setLoading(true);
         const res = await fetch(
-          `https://68ca4e99430c4476c348fa2f.mockapi.io/product/product/${color}`
+          `https://6832af5cc3f2222a8cb31541.mockapi.io/Courses/Courses/${color}`
         );
         const d = await res.json();
         setDataColor(d);
