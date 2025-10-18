@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { imageMap } from "./imageMap";
+import { imageMap } from "../utils/imageMap";
 import { useLocalSearchParams } from "expo-router";
 import { useRouter } from "expo-router";
 
@@ -32,7 +32,7 @@ const SelectColor = () => {
       try {
         setLoading(true);
         const res = await fetch(
-          `https://6832af5cc3f2222a8cb31541.mockapi.io/Courses/Courses/${color}`
+          `https://68f31943fd14a9fcc427cb0c.mockapi.io/product/${color}`
         );
         const d = await res.json();
         setDataColor(d);
