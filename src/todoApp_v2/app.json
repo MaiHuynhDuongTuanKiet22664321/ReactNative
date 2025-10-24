@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "expo-sqlite"
+  ],
+  "name": "todoApp_v2",
+  "slug": "todoApp_v2"
+}
